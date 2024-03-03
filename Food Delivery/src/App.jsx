@@ -1,43 +1,43 @@
 import React from "react"
-import { Button } from "./components/ui/button"
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
+// import { useEffect,useState } from "react"
+// import axios from "axios"
+import { BrowserRouter,Route,Routes } from "react-router-dom"
+import SignUp from "./pages/Signup"
+import Login from "./pages/Login"
 
-// import HomeButton from "./components/Home"
+
 function App() {
+
+  // const [backendData,setBackendData] = useState([])
+
+  // useEffect(()=>{
+  //   axios.get('/api')
+  //   .then((response)=>{
+  //     setBackendData((response.data))
+  //   })
+  //   .catch((error)=>{
+  //     console.log(error) 
+  //   })
+  // })
+  
   return (
     <>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-            <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <NavigationMenuLink asChild>
-              <ListItem title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem  title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-              </NavigationMenuLink>
-            </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-      
+    {/* <h1>All Names</h1>
+    <p>person: {backendData.length}</p>
+  
+      {backendData.map((item,index)=>(
+        <div key={item.id}>
+          <h1>{item.name}</h1>
+          <p>{item.content}</p>
+        </div>
+      ))
+      } */}
+      <BrowserRouter>
+      <Routes>
+        <Route path="/signup" element={<SignUp/>}></Route>
+        <Route path="/login"  element={<Login/>}></Route>
+      </Routes>
+      </BrowserRouter>
     </>
     )
 }
