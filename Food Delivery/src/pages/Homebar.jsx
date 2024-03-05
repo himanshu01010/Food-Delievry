@@ -13,22 +13,22 @@ export default function Homebar() {
 
         
             <div className="flex-grow mx-4">
-                <Input id="search" type="text" placeholder="Search" className="border-black h-7 w-50" />
+                <Input id="search" type="text" placeholder="Search" className="border-black h-10 w-2/5 " />
             </div>
 
         
             <div className="flex items-center space-x-4">
                 <Link to="/">
-                    <Button variant="outline" className="border-black hover:text-black">Home</Button>
+                    <Button variant="outline" className="border-black bg-blue-400 hover:bg-blue-500 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 h-8">Home</Button>
                 </Link>
                 <Link to="/">
-                    <Button variant="outline" className="border-black hover:text-black">Offers</Button>
+                    <Button variant="outline" className="border-black bg-blue-400 hover:bg-blue-500 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 h-8">Offers</Button>
                 </Link>
                 <Link to="/">
-                    <Button variant="outline" className="border-black hover:text-black">Cart</Button>
+                    <Button variant="outline" className="border-black bg-blue-400 hover:bg-blue-500 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 h-8">Cart</Button>
                 </Link>
-                <Link to="/">
-                    <Button variant="outline" className="border-black hover:text-black">Login</Button>
+                <Link to="/login">
+                    <Button variant="outline" className="border-black bg-blue-400 hover:bg-blue-500 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 h-8">Login</Button>
                 </Link>
             </div>
         </div>
