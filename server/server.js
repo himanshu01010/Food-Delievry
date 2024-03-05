@@ -1,29 +1,41 @@
 import express from 'express'
-import * as mongooose from "mongooose";
+import mongoose from 'mongoose';
+import dotenv from 'dotenv'
+import cors from 'cors';
+import userModel from './models/userModel.js';
+
+
 const app = express()
-// const mongoose = require('mongoose')
-// const cors = require("cors")
+dotenv.config();
+app.use(express.json());
+app.use(cors());
 
-// app.get("/api", (req,res)=>{
+const { MONGODB_URI } = process.env;
 
-//     const user = [{
-//         id: 1,
-//         name: "kulu",
-//         content: "this my name"
-//     },
-//     {
-//         id: 2,
-//         name: "kanu",
-//         content: "this is my real name"
-//     },
-//     {
-//         id:3,
-//         name:"nanu",
-//         content:"this is my name of household"
-//     }
-// ];
+async function connectToDatabase() {
+    try {
+        await mongoose.connect(MONGODB_URI ,{
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log('connected to MongoDB');
+    } catch (error){
+        console.error("Error connecting to MongoDB",error);
+    }
+}
 
-// res.send(user);
-// })
+connectToDatabase();
+
+
+app.post('/api/signup', async(req,res)=>{
+    try {
+        const newUser = await userModel.create(req.body);
+        res.status(201).json(newUser);
+    } catch (error) {
+        console.error('Error creating user:',error);
+        res.status(500).json({error:'Internal server error'});
+        
+    }
+});
 
 app.listen(5000,()=>{console.log("the server port is running in 5000")})
