@@ -22,7 +22,8 @@ const SignUp = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault()
-    axios.post('',{name,email,password})
+    console.log(name)
+    axios.post('/api/signup',{name,email,password})
     .then(result => console.log(result))
     .catch(err=>console.log(err))
   }
@@ -51,7 +52,7 @@ const SignUp = () => {
               </div>
             </CardContent>
             <CardFooter>
-              <Button className="w-full" onSubmit={handleSubmit}>Signup</Button>
+              <Button className="w-full" onClick={handleSubmit}>Signup</Button>
             </CardFooter>
             <p className="mb-2">Already Have an Account</p>
             <Link to="/login">

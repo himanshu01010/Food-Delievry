@@ -1,6 +1,4 @@
 import React from "react"
-// import { useEffect,useState } from "react"
-// import axios from "axios"
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 import SignUp from "./pages/Signup"
 import Login from "./pages/Login"
