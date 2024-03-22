@@ -3,6 +3,9 @@ import { BrowserRouter,Route,Routes } from "react-router-dom"
 import SignUp from "./pages/Signup"
 import Login from "./pages/Login"
 import Homepage from "./pages/Homepage"
+import Cart from "./pages/Cart"
+import Offers from "./pages/Offers"
+import Biryani from "./pages/Biryani"
 
 
 function App() {
@@ -34,8 +37,11 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage/>}></Route>
+        <Route path="/biryani" element={<Biryani/>}></Route>
         <Route path="/signup" element={<SignUp/>}></Route>
         <Route path="/login"  element={<Login/>}></Route>
+        <Route path="/cart"  element={<Cart/>}></Route>
+        <Route path="/offers"  element={<Offers/>}></Route>
       </Routes>
       </BrowserRouter>
     </>
