@@ -5,7 +5,7 @@ import Login from "./pages/Login"
 import Homepage from "./pages/Homepage"
 import Cart from "./pages/Cart"
 import Offers from "./pages/Offers"
-import Biryani from "./pages/Biryani"
+import ItemDetails from "./pages/ItemDetails"
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage/>}></Route>
-        <Route path="/biryani" element={<Biryani/>}></Route>
+        <Route path="/:categoryName/:itemName" element={<ItemDetails/>}></Route>
         <Route path="/signup" element={<SignUp/>}></Route>
         <Route path="/login"  element={<Login/>}></Route>
         <Route path="/cart"  element={<Cart/>}></Route>
