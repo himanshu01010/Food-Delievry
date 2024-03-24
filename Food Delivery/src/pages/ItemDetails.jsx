@@ -2,6 +2,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import FoodMenu from './FoodMenu';
+import Homebar from './Homebar';
+import Footer from './Footer';
 
 const ItemDetail = ({ foodCategories }) => {
   const { categoryName, itemName } = useParams();
@@ -16,11 +18,13 @@ const ItemDetail = ({ foodCategories }) => {
 
   return (
     <div>
+      <Homebar/>
       <h2>{item.name}</h2>
       <img src={item.image} alt={item.name} />
       <p>Price: {item.price}</p>
       <p>Rating: {item.rating}</p>
       {/* Add more details as needed */}
+      <Footer/>
     </div>
   );
 };

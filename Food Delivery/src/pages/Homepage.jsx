@@ -26,7 +26,7 @@ export default function Homepage(){
               <p className="left-1/10 font-thin right-1/10 text-center justify-center text-violet-400">Welcome to FavorDash, where every craving meets its match! Embark on a culinary adventure like no<br/> other as you explore a world of flavors, convenience, and delightful surprises.<br/> Get ready to indulge in a symphony of tastes and discover new favorites with every click.</p>
             </div>
             
-            <FoodMenu/>
+            <FoodMenu />
 
             <Footer/>
 
