@@ -25,6 +25,10 @@ const Contact = () => {
           {/* Add a contact form here if needed */}
         
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
       <Footer />
     </div>
   );
