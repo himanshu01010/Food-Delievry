@@ -16,7 +16,7 @@ export default function Homebar() {
 
         
             <div className="flex-grow mx-4">
-                <Input id="search" type="text" placeholder="Search for anything" className="placeholder:italic boder border-violet-500 hover:border-violet-700 h-10 w-3/5 " />
+                <Input id="search" type="text" placeholder="Search for anything" className="placeholder:italic text-violet-700 boder border-violet-500 hover:border-violet-700 h-10 w-3/5 " />
             </div>
 
         
@@ -31,7 +31,7 @@ export default function Homebar() {
                     <img src="cart.png" alt="cart" className="w-11 h-11" />
                 </a>
                 <a href="/login" >
-                    <img src="login.png" alt="login" className="w-12 h-12" />
+                    <img src="login.png" alt="login" className="w-12 h-13" />
                 </a>
             </div>
         </div>
